@@ -1,0 +1,38 @@
+.features-text{
+    max-width: 100%;
+}
+.features-text h3{
+    padding-bottom: 30px;
+    max-width: 90%;
+}
+.features-item {
+    max-width: 100%;
+}
+
+.features-blocks {
+    margin-left: 0;
+}
+.services-section{
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+}
+.servise-container{
+    width: 50%;
+}
+.services-block{
+    padding-top: 30px;
+    display: flex;   
+    justify-content: space-between;
+}
+.servises-wrap{
+    display: flex;
+}
+.servises-list{
+    margin-right: 30px;
+    max-width: 50%;
+}
+.servises-list li{
+    margin-bottom: 15px;
+    /* max-width: 50%; */
+}
