@@ -111,3 +111,40 @@
 .tag{
     color: #fff;
 }
+.pagination-wrapp{
+    text-align: center;
+    margin-top: 90px;
+}
+.pagination {
+    display: inline-block;
+   margin: 0 auto;
+   width: 300px;
+  }
+  
+  .pagination a, .pagination span {
+	color: #fff;
+	float: left;
+	padding: 8px 14px;
+    text-decoration: none;
+ 
+  }
+  
+  .pagination a.active {
+	background-color: #EF4A23;
+	color: white;
+	border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+	background-color: #EF4A23;
+	border-radius: 5px;
+  }
+ .pagination img{
+     width: 20px;
+ }
+ .pagination .right-arrow{
+     transform: rotate(180deg);
+ }
+.contact-section{
+    padding-top: 100px;
+}

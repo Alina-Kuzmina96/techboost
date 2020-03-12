@@ -1,0 +1,106 @@
+.post-wrapp{
+    margin-bottom: 95px;
+}
+
+.more-post-title, .post-title{
+    width: 100%;
+    font-size: 40px;
+    line-height: 1;
+}
+.post-title{
+    padding-top: 95px;
+}
+.post-img{
+    width: 100%;
+    max-height: 291px;
+    overflow: hidden;
+    height: 291px;
+    background-image: url("../img/Image 6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 70%;
+}
+.post-info{
+    margin-bottom: 50px;
+}
+.post-info-wrapp{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+   align-items: center;
+}
+.post-author{
+
+}
+.avatar-wrapp{
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 60px;
+    max-height: 60px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.author-meta{
+    display: inline-block;
+}
+.author-meta p{
+    display: inline-block;
+}
+
+.time{
+    color: #fff;
+}
+.post-author .post__link{
+    max-width: 23.5px;
+    max-height: 23.5px;
+    background-size: 23.5px;
+}
+.post-author{
+    display: flex;
+    align-items: center;
+}
+.author-name-wrapp{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.author-name{
+    font-size: 17px;
+    font-family: Roobert-Light;
+}
+.post-date-wrapp{
+    font-size: 15px;
+    opacity: 0.3;
+}
+.date-divider{
+    padding: 0 5px;
+}
+.post-social{
+    width: auto;
+    height: auto;
+    text-align: center;
+    display: inline;
+    
+}
+.post__link{
+    min-width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: 50%;
+    display: inline-block;
+}
+.post__link--fb{
+    background-image: url(../img/facebook-circular-logo.svg);
+}
+.post__link--twit{
+background-image: url(../img/twitter.svg);
+}
+.post__link--link{
+background-image: url(../img/linkedin.svg);
+}
+.post-text p{
+    margin-bottom: 30px;
+    line-height: 28px;
+
+}
