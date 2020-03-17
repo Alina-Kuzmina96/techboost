@@ -10,20 +10,21 @@
     <link rel="stylesheet" href="./css/blog.css">
 </head>
 <body>
-    <div class="wrapp">
-        <header>
-            <div class="logo">
-                <img src="./img/logo.svg" alt="">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">PROCESS</a></li>
-                    <li><a href="#">BLOG</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <div class="logo">
+            <img src="./img/logo.svg" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">PROCESS</a></li>
+                <li><a class="active" href="#">BLOG</a></li>
+            </ul>
+        </nav>
+     
+    </header>
+
         <section class="blog-section">
             <div class="blog_header">
             <h2 class="main-title blog-title">
@@ -43,6 +44,22 @@
                 <div class="filter-search">
                     <label for="input"></label>
                     <input type="text" placeholder=" Search Blog...">
+                </div>
+            </div>
+            <div class="blog-filters-mobile">
+                <div class="filters-select-wrapp">
+                <div class="filters-select">
+                    <select>
+                        <option disabled selected>FILTER CATEGORIES</option>
+                        <option>Design</option>
+                        <option>DesDevelopmentign</option>
+                        <option>Marketing</option>
+                        <option>DevOps</option>
+                      </select>
+                </div>
+            </div>
+                <div class="search-select">
+                    <img src="./img/search.svg" alt="">
                 </div>
             </div>
 
@@ -158,7 +175,7 @@
                          you need and we'll do it no questions asked.
                     </p>
                     <div class="rocket-img-wrapp">
-                        <img class="rocket-img" src="./img/rocket-img.svg" alt="">
+
                     </div>
                 </div>
                 <div class="contact-form">
@@ -173,7 +190,7 @@
             </div>
             
           </section>
-    </div>
+ 
     <footer>
         <div class="footer-wrapp">
           <div class="logo">

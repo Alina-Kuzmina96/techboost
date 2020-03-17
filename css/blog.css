@@ -1,6 +1,6 @@
-.blog-section{
+/* .blog-section{
     max-width: 1088px;
-}
+} */
 .blog_header{
     display: flex;
     width: 100%;
@@ -147,4 +147,106 @@
  }
 .contact-section{
     padding-top: 100px;
+}
+.blog-filters-mobile{
+    display: none;
+}
+@media (max-width :1200px){
+    .blog-filters{
+    flex-direction: column;
+    align-items: flex-start;
+    }
+    .filter-search{
+        margin-left: 0;
+        width: 100%;
+    }
+    .filters_title, .filter-btns{
+        margin-bottom: 20px;
+    }
+    .news-wrapp {
+        justify-content: center;
+    }
+}
+@media (max-width: 1024px){
+    .blog-filters{
+        display: none;
+    }
+    .blog-filters-mobile{
+        display: flex;
+        justify-content: space-between;
+    }
+    .filters-select{
+        position: relative;
+        max-width: 200px;
+        width: 200px;
+        display: block;
+    }
+    .filters-select select {
+        outline: none;
+        border: none;
+        background: transparent;
+        color: #fff;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-family: inherit;
+        font-size: 1rem;
+        color: #fff;
+        outline: none;
+        position: relative;
+        padding: 5px 10px;
+        margin-left: -10px;
+    }
+
+    option{
+        background-color: #000;
+        border: none;
+        outline: none;
+        padding: 5px 10px;
+    }
+    .filters-select:after{
+        content: "";
+        display: block;
+        border-style: solid;
+        border-width: 9px 8px 0 8px;
+        border-color: #fff transparent transparent transparent;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        z-index: 20;
+        margin-top: -3px;
+        transition: transform 0.3s;
+    }
+    .search-select{
+        display: flex;
+        justify-content: baseline;
+    }
+
+}
+@media (max-width:425.5px){
+    /* .news-item{
+        max-width: 100%;
+    } */
+  
+    .pagination{
+        display: flex;
+        width: 320px;
+    }
+    .pagination span{
+        display: flex;
+        align-items: flex-end;
+    }
+    .pagination a{
+        font-size: 24px;
+    }
+    .search-select{
+        display: inline;
+    }
+    
+}
+@media (max-width:330px){
+    .news-item, .news-item img{
+        width: 300px;
+    }
 }
