@@ -75,7 +75,7 @@ section{
 }
 .white-decor{
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     background-repeat: no-repeat;
     background-size: contain;
     width: 300px;
@@ -178,10 +178,13 @@ header .logo img, footer .logo img{
     width: 187px;
     height: 36px;
 }
-header nav ul li a{
+header nav{
+    padding-top: 10px;
+}
+.menu__box li a{
    position: relative; 
 }
-header nav ul li a:after{
+.menu__box li a:after{
     background-color: #EF4A23;
     display: block;
     content: "";
@@ -197,18 +200,18 @@ header nav ul li a:after{
     -moz-transform:translateX(-50%);
     transform:translateX(-50%);
 }
-header nav ul li a:hover:after,
-header nav ul li a:focus:after {
+.menu__box li a:hover:after,
+.menu__box li a:focus:after {
     width: 100%;
 }
-header nav ul, footer .menu-wrapp ul{
+.menu__box, footer .menu-wrapp ul{
     display: flex;
     margin-right: 140px;
 }
-header nav ul li, footer .menu-wrapp ul li{
+.menu__box li, footer .menu-wrapp ul li{
     margin-left: 22px;
 }
-header nav ul li a, footer .menu-wrapp ul li a{
+.menu__box li a, footer .menu-wrapp ul li a{
     color: #FFFFFF;
     text-transform: uppercase;
     padding-bottom: 5px;
@@ -240,9 +243,9 @@ footer .menu-wrapp ul li a{
     opacity: 0.43;
     padding: 15px;
 }
-
-
-
+#menu__toggle{
+    display: none;
+}
 
 .main_block{
     min-height: 500px;
@@ -251,6 +254,8 @@ footer .menu-wrapp ul li a{
     background-image: url(../img/Group-418.svg);
     background-size: 110%;
     background-position: -112% 50%;
+    z-index: -2;
+    position: relative;
 }
 .main-title{
     font-size: 3.75vw;
@@ -447,6 +452,101 @@ textarea{
    }
 }
 @media (max-width: 768px){
+    .active{
+        border-bottom: none;
+        color: #EF4A23;
+    }
+    #menu__toggle {
+        opacity: 0;
+      }
+      #menu__toggle{
+        display: block;
+    }
+      #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+      }
+      #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+      }
+      #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        right: 0;
+      }
+      
+      .menu__btn {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 29px;
+        right: 20px;      
+        width: 26px;
+        height: 26px;     
+        cursor: pointer;
+        z-index: 11;
+      }
+      
+      .menu__btn > span,
+      .menu__btn > span::before,
+      .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transition-duration: .25s;
+      }
+      .menu__btn > span::before {
+        content: '';
+        top: -8px;
+      }
+      .menu__btn > span::after {
+        content: '';
+        top: 8px;
+      }
+      
+      .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        height: 100%;
+      
+        margin: 0;
+        padding: 80px 0;
+      
+        list-style: none;
+      
+        background-color: #000;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+      
+        transition-duration: .25s;
+      }
+      
+      .menu__item {
+        display: block;
+        padding: 12px 24px;
+      
+        color: #FFF;
+      
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+      
+        text-decoration: none;
+      
+        transition-duration: .25s;
+      }
+      .menu__item:hover {
+        /* background-color: #CFD8DC; */
+      }
     .mouse-icon{
         display: none;
     }
@@ -457,10 +557,21 @@ textarea{
         padding-bottom: 300px;
         background-repeat: no-repeat;
     }
+    .menu__box li a:after{
+        background-color: transparent;
+    }
+    .menu__box{
+        background-image: url(../img/rocket-img.svg);
+        background-position: -60px 78%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+    }
     .main_block {
     flex-direction: column-reverse;
     align-items: center;
-    padding-top: 100px;    
+    padding-top: 100px;
+    z-index: 1; 
     }
     .main-img img {
         width: 70vw;  
@@ -503,6 +614,9 @@ textarea{
         margin-left: 10px;
         margin-right: 10px;
     }
+    .white-decor{
+        z-index: 1;
+    }
     .white-decor23 {
         background-image: url(../img/lines23.svg);
         right: 0;
@@ -512,14 +626,14 @@ textarea{
     .white-decor1 {
         background-image: url(../img/lines1.svg);
         left: 0;
-        bottom: 83px;
+        bottom: 33px;
         background-position: -100px 20px;
     }
 
 }
 
 @media (max-width: 500px){
-    nav, .main-img, .mouse-icon, .divider, .white-decor25, .rocket-img-wrapp{
+    .main-img, .mouse-icon, .divider, .white-decor25, .rocket-img-wrapp{
         display: none;
     }
     .wrapp {
@@ -532,9 +646,9 @@ textarea{
     }
     .main{
         background-image: url(../img/Group-418.svg);
-        background-size: 315%;
-        background-position: 85% 50%;
-        padding-bottom: 300px;
+        background-size: 325%;
+        background-position: 85% 70%;
+        padding-bottom: 0px;
         background-repeat: no-repeat;
     }
     .main-title {
@@ -554,11 +668,12 @@ textarea{
     }
     .main_block{
         background-image: url(../);
+        padding-top: 0;
+        padding-bottom: 200px;
     }
-    /* .white-decor2 {
-        top: -90px;
-        left: -400px;
-    } */
+    .white-decor2{
+        display: none;
+    }
     .white-decor23 {
         background-image: url(../img/lines23.svg);
     right: 0;
@@ -568,7 +683,7 @@ textarea{
     .white-decor1 {
         background-image: url(../img/lines1.svg);
         left: 0;
-        bottom: 93px;
+        bottom: -17px;
         background-position: -190px 20px;
     }
     .white-decor24{

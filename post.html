@@ -14,16 +14,23 @@
 
         <header>
             <div class="logo">
-                <img src="./img/logo.svg" alt="">
+                <a href="index.html"><img src="./img/logo.svg" alt=""></a>
             </div>
             <nav>
-                <ul>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">PROCESS</a></li>
-                    <li><a class="active" href="#">BLOG</a></li>
-                </ul>
-            </nav>
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span>
+                    </label>
+            
+                  <ul class="menu__box">
+                    <li><a class="menu__item" href="index.html">ABOUT</a></li>
+                    <li><a class="menu__item" href="services.html">SERVICES</a></li>
+                    <li><a class="menu__item" href="process.html">PROCESS</a></li>
+                    <li><a class="menu__item" href="blog.html">BLOG</a></li>
+                  </ul>
+                </div>
+              </nav>
         </header>
         <section class="blog-section post">
             <div class="post-wrapp">
@@ -156,7 +163,7 @@
                          you need and we'll do it no questions asked.
                     </p>
                     <div class="rocket-img-wrapp">
-                        <img class="rocket-img" src="./img/rocket-img.svg" alt="">
+
                     </div>
                 </div>
                 <div class="contact-form">
@@ -175,7 +182,7 @@
     <footer>
         <div class="footer-wrapp">
           <div class="logo">
-              <img src="./img/logo.svg" alt="">
+            <img src="./img/logo.svg" alt="">
           </div>
           <div class="menu-wrapp">
               <ul>
